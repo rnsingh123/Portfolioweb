@@ -1,9 +1,8 @@
 # Portfolioweb
 This website serves as:
 
-- My personal space on the internet  
-- A playground for learning UI/UX concepts  
-- A showcase for future clients and employers  
-- A testing platform for new ideas, layouts, and code improvements  
-
-The project will evolve over time as I improve my skills.
+@ A portfolio website under constant development.
+@ Built using HTML, CSS, ......
+@ This projects is built with the vision of constantly modying and commiting it to be a responsive, precise, fast, different, and clean.
+Author:
+        Heigrujam/
