@@ -1,72 +1,125 @@
-<!DOCTYPE html> <!-- HTML5 document type -->
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Makes page responsive on mobiles -->
-  
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <!-- Links external CSS file -->
-</head>  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisionEngine</title>
 
-<body>
-<div class="top-nav">
-  <a href="#about">ABOUT ME</a>
-  <a href="#web">GALLERY</a>
-  <a href="#custom">TOOLS</a>
-  <a href="#responsive">CONTACT</a>
-  
-</div>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 
-<section class="hero">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#e8dccf',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
 
-  <div class="hero-left">
-      <h1>CRAFTING CLEAN WEB <br> EXPERIENCES</h1>
-      <p class="hero-tagline">Student developer crafting websites with clean code and creativity.</p>
-  </div>
+<body class="bg-paper text-[#111] m-0">
 
-  <div class="hero-right">
-      <img src="hero.jpg" alt="Hero Graphic">
-  </div>
+  <!-- NAV (editorial overlay) -->
+  <header class="fixed inset-0 z-10 pointer-events-none">
+    <div class="fixed top-8 left-12 text-sm tracking-widest uppercase font-sans pointer-events-auto">
+      VisionEngine
+    </div>
 
-</section>
+    <nav class="fixed top-8 right-12 flex gap-6 text-sm tracking-wide pointer-events-auto">
+      <a href="#work">Work</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<section id="about" class="about-section">
-  
+  <!-- HERO -->
+  <section class="relative h-screen grid place-items-center overflow-hidden">
 
-  <div class="about-box">
-    <img src="profile.jpg" class="profile-pic">
-    <h2>About Me</h2>
-    <p>Hello, I'm rnh — Welcome to my personal project!</p>
+    <!-- Background typography -->
+    <h1
+      class="
+        absolute
+        top-1/2 left-1/2
+        -translate-x-1/2 -translate-y-1/2
+        font-serif font-extrabold
+        tracking-[-0.04em] leading-[0.9]
+        text-black
+        whitespace-normal md:whitespace-nowrap
+        pointer-events-none
+        z-[1]
+        text-[clamp(4rem,15vw,14rem)]
+      "
+    >
+    Calm systems.
+    </h1>
 
-    <h3>Rohan Heigrujam</h3>
-    <p>"Creator, Developer and Student"</p>
+    <!-- Optional illustration -->
+    <!--
+    <img
+      src="illustration.png"
+      alt=""
+      class="max-w-[420px] w-full opacity-95 z-[2]"
+    />
+    -->
 
-    <p>
-      I’m a student passionate about creating complete, functional, and visually sharp digital experiences. 
-      I work with WordPress to build and customize websites, and I write clean, efficient code using HTML, CSS, JavaScript, and PHP. 
-      On the backend, I enjoy designing logic, working with APIs, and managing MySQL databases to make projects fast, dynamic, and
-       reliable. I’m always exploring new tools and sharpening my skills as I grow into a capable full-stack developer.
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section id="philosophy" class="px-[8vw] py-40 max-w-[900px]">
+    <p class="text-lg leading-relaxed">
+      I approach the web as a system — not pages.<br>
+      Structure, clarity, and performance come first.<br><br>
+
+      VisionEngine builds digital products that remain useful
+      long after trends expire.
     </p>
+  </section>
 
-    <h3>Skills</h3>
-    <ul>
-      <li>HTML5 & CSS3</li>
-      <li>JavaScript</li>
-      <li>Responsive Design</li>
-      <li>UI/UX Design</li>
-       <li>node.js</li>
-       <li>MySql</li>
-       <li>MongoDB</li>
-       <li>Python</li>
-       <li>react</li>
-    </ul>
-  </div>
-</section>
+  <!-- WORK -->
+  <section id="work" class="px-[8vw] py-40 max-w-[900px]">
+    <article class="mb-20">
+      <h2 class="font-serif text-3xl mb-2">Project0020</h2>
+      <p class="mb-1">Business & eCommerce Platform</p>
+      <span class="text-sm opacity-70">2025 — WordPress / PHP / MySQL</span>
+    </article>
 
-  
+    <article>
+      <h2 class="font-serif text-3xl mb-2">Portfolio System</h2>
+      <p class="mb-1">Minimal editorial personal website</p>
+      <span class="text-sm opacity-70">2024 — HTML / CSS / JavaScript</span>
+    </article>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="px-[8vw] py-40 max-w-[900px]">
+    <p class="leading-relaxed">
+      Frontend — HTML, CSS, JavaScript, Tailwind<br>
+      Backend — PHP, MySQL, Node.js<br>
+      Systems — Git, Performance, SEO Basics
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact" class="px-[8vw] py-40 max-w-[900px]">
+    <p class="leading-relaxed">
+      Open to serious collaborations.<br><br>
+
+      Email — your@email.com<br>
+      GitHub — github.com/username<br>
+      LinkedIn — linkedin.com/in/username
+    </p>
+  </footer>
 
 </body>
 </html>
